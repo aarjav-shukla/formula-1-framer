@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-black text-white">
+    <nav
+      class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/50 backdrop-blur-md"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8"
+      >
+        <a href="#" class="text-xl font-bold tracking-[0.25em] uppercase"
+          >Formula 1</a
+        >
+        <div class="hidden items-center gap-8 text-md text-white/75 md:flex">
+          <a href="#" class="transition hover:text-white">Home</a>
+          <a href="#" class="transition hover:text-white">Gallery</a>
+          <a href="#" class="transition hover:text-white">About</a>
+          <a href="#" class="transition hover:text-white">Contact</a>
+        </div>
+        <a
+          href="#"
+          class="rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-white transition hover:bg-green-400 hover:text-black"
+        >
+          Explore
+        </a>
+      </div>
+    </nav>
+
+    <div class="w-full bg-black pt-20">
+      <div class="parent w-full h-[700vh] bg-blue-400 top-0 left-0">
+        <div class="h-screen w-full sticky top-0 left-0">
+          <div class="absolute w-[20vw] left-[42%]"><img src="f1.png" alt="" /></div>
+          <canvas class="w-full h-screen"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <section
+      id="next-page"
+      class="min-h-screen border-t border-white/10 bg-gradient-to-b from-black via-zinc-950 to-zinc-900 px-5 py-24 sm:px-8"
+    >
+      <div
+        class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-end"
+      >
+        <div class="max-w-2xl">
+          <p class="mb-4 text-sm uppercase tracking-[0.35em] text-white/50">
+            Race Report
+          </p>
+          <h2
+            class="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl"
+          >
+            From Garage To Grid — Today's Highlights and Insights
+          </h2>
+        </div>
+        <div class="space-y-6 text-base leading-7 text-white/70 sm:text-lg">
+          <p>
+            Follow the latest Formula 1 action: qualifying results, race
+            strategy, and technical updates. Scroll to read driver notes and
+            team highlights from the paddock.
+          </p>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div
+              class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm hover:bg-green-400 transition-all hover:text-black group"
+            >
+              <p class="mb-2 text-sm uppercase tracking-[0.25em] text-white/40 group-hover:text-black ">
+                Pole Position
+              </p>
+              <p class="text-white group-hover:text-black">
+                Latest qualifying order and lap analysis.
+              </p>
+            </div>
+            <div
+              class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm  hover:bg-green-400 transition-all hover:text-black group"
+            >
+              <p class="mb-2 text-sm uppercase tracking-[0.25em] text-white/40 group-hover:text-black">
+                Race Strategy
+              </p>
+              <p class="text-white group-hover:text-black">
+                Pit windows, tyre choices, and tactical calls.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
