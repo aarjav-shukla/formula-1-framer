@@ -6,25 +6,28 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="bg-black text-white">
+  <body class="bg-black text-white selection:bg-green-400 selection:text-black overflow-x-hidden">
     <nav
-      class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/50 backdrop-blur-md"
+      class="fixed inset-x-0 top-0 z-50 border-b border-green-400/15 bg-black/70 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.45)]"
     >
       <div
         class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8"
       >
-        <a href="#" class="text-xl font-bold tracking-[0.25em] uppercase"
-          >Formula 1</a
+        <a
+          href="#"
+          class="text-xl font-black tracking-[0.3em] uppercase text-white transition hover:text-green-300"
         >
-        <div class="hidden items-center gap-8 text-md text-white/75 md:flex">
-          <a href="#" class="transition hover:text-white">Home</a>
-          <a href="#" class="transition hover:text-white">Gallery</a>
-          <a href="#" class="transition hover:text-white">About</a>
-          <a href="#" class="transition hover:text-white">Contact</a>
+          Formula 1
+        </a>
+        <div class="hidden items-center gap-8 text-md text-white/70 md:flex">
+          <a href="#" class="transition hover:text-green-300">Home</a>
+          <a href="#" class="transition hover:text-green-300">Gallery</a>
+          <a href="#" class="transition hover:text-green-300">About</a>
+          <a href="#" class="transition hover:text-green-300">Contact</a>
         </div>
         <a
           href="#"
-          class="rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-white transition hover:bg-green-400 hover:text-black"
+          class="rounded-full border border-green-400/30 bg-green-400/10 px-4 py-2 text-sm font-medium text-green-200 transition hover:bg-green-400 hover:text-black hover:shadow-[0_0_24px_rgba(34,197,94,0.35)]"
         >
           Explore
         </a>
@@ -32,9 +35,60 @@
     </nav>
 
     <div class="w-full bg-black pt-20">
-      <div class="parent w-full h-[700vh] bg-blue-400 top-0 left-0">
+      <div class="parent w-full h-[700vh] bg-black top-0 left-0">
         <div class="h-screen w-full sticky top-0 left-0">
-          <div class="absolute w-[20vw] left-[42%]"><img src="f1.png" alt="" /></div>
+          <div class="logo absolute w-[20vw] left-[42%]">
+            <img src="f1.png" alt="" />
+          </div>
+          <div
+            class="animate2 opacity-1 absolute left-6 top-1/2 z-20 max-w-md -translate-y-1/2 rounded-[2rem] border border-green-400/30 bg-black/55 p-6 shadow-[0_0_40px_rgba(34,197,94,0.18)] backdrop-blur-md sm:left-10 sm:p-8"
+          >
+            <p
+              class="mb-3 text-xs font-semibold uppercase tracking-[0.45em] text-green-300/90"
+            >
+              Neon Drive
+            </p>
+            <h1
+              class="text-4xl font-black uppercase leading-none tracking-[0.18em] text-white sm:text-5xl"
+            >
+              Green Pulse
+            </h1>
+            <p
+              class="mt-4 max-w-sm text-sm leading-6 text-white/70 sm:text-base"
+            >
+              A sharp, high-contrast motion panel built for speed, precision,
+              and a clean green-on-black racing vibe.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <span
+                class="rounded-full border border-green-400/30 bg-green-400/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.25em] text-green-300"
+              >
+                Turbo Mode
+              </span>
+              <span
+                class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.25em] text-white/70"
+              >
+                Night Grid
+              </span>
+            </div>
+          </div>
+          <div
+            class="animate3 absolute top-1/2 right-0 z-20 flex h-96 w-48 -translate-y-1/2 flex-col rounded-[2rem] border border-green-400/30 bg-black/55 p-4 shadow-[0_0_40px_rgba(34,197,94,0.16)] backdrop-blur-md sm:right-10"
+          >
+            <div
+              class="flex items-center justify-center text-[20px] font-bold uppercase tracking-[0.45em] text-green-300/90"
+            >
+              Speed
+            </div>
+            <div
+              class="mx-auto h-full w-px bg-gradient-to-b from-green-400/80 via-green-300/30 to-transparent"
+            ></div>
+            <div
+              class="flex items-center justify-center text-[20px] font-bold uppercase tracking-[0.45em] text-green-300/90"
+            >
+              Launch
+            </div>
+          </div>
           <canvas class="w-full h-screen"></canvas>
         </div>
       </div>
@@ -67,7 +121,9 @@
             <div
               class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm hover:bg-green-400 transition-all hover:text-black group"
             >
-              <p class="mb-2 text-sm uppercase tracking-[0.25em] text-white/40 group-hover:text-black ">
+              <p
+                class="mb-2 text-sm uppercase tracking-[0.25em] text-white/40 group-hover:text-black"
+              >
                 Pole Position
               </p>
               <p class="text-white group-hover:text-black">
@@ -75,9 +131,11 @@
               </p>
             </div>
             <div
-              class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm  hover:bg-green-400 transition-all hover:text-black group"
+              class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm hover:bg-green-400 transition-all hover:text-black group"
             >
-              <p class="mb-2 text-sm uppercase tracking-[0.25em] text-white/40 group-hover:text-black">
+              <p
+                class="mb-2 text-sm uppercase tracking-[0.25em] text-white/40 group-hover:text-black"
+              >
                 Race Strategy
               </p>
               <p class="text-white group-hover:text-black">

@@ -58,15 +58,33 @@ function animation() {
       trigger: ".parent",
       start: "top top",
       end: "bottom bottom",
-      markers: true,
+
       scrub: 2,
     },
   });
-  tl.to(frames, {
-    currentindex: frames.maxindex,
-    onUpdate: () => {
-      loadimage(Math.floor(frames.currentindex));
-    },
-  });
+
+  function updateframe(index){
+    return {
+      currentindex:index,
+      onUpdate: () => {
+        loadimage(Math.floor(frames.currentindex));
+      },
+    };
+  }
+  
+  tl.to(frames, updateframe(100),"first")
+  tl.to(".logo",{opacity:0,ease:"linear"},"first")
+
+  tl.to(frames,updateframe(150),"second")
+  tl.to(".animate2",{opacity:1,ease:"linear"},"second")
+
+
+    tl.to(frames, updateframe(300), "third");
+    tl.from(".animate3", { x:300, ease: "linear", }, "third");
+    tl.to(".animate2", { opacity: 0, ease: "linear" }, "third");
+
+     tl.to(frames, updateframe(frames.maxindex));
+
+
 }
 preload();
